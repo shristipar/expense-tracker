@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_medium_sea_green"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:gravity="left"
+        android:minWidth="200dp"
+        android:orientation="vertical">
+
+        <ViewAnimator
+            android:id="@+id/title_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    fontPath="fonts/moon-bold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="JOIN"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="40sp" />
+
+                <TextView
+                    fontPath="fonts/moon-bold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" US"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    app:font_name="moon-bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    fontPath="fonts/moon-bold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="COME"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="40sp"
+                    app:font_name="moon-bold" />
+
+                <TextView
+                    fontPath="fonts/moon-bold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" IN"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    app:font_name="moon-bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    fontPath="fonts/moon-bold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ENTER"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="40sp"
+                    app:font_name="moon-bold" />
+
+                <TextView
+                    fontPath="fonts/moon-bold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" CODE"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    app:font_name="moon-bold" />
+            </LinearLayout>
+        </ViewAnimator>
+
+        <LinearLayout
+            android:id="@+id/layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_face_black_24dp"
+                    android:tint="@color/colorPrimaryText" />
+
+                <com.trackexpense.snapbill.ui.TextViewWithFont
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Email"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/colorPrimaryText"
+                    app:font_name="moon-bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.trackexpense.snapbill.ui.EditTextWithFont
+                    android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_padding"
+                    android:enabled="true"
+                    android:gravity="left"
+                    android:hint="@string/hint_register_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@drawable/cursor_input"
+                    android:textSize="16sp"
+                    app:font_name="Montserrat-Regular" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_lock_black_24dp"
+                    android:tint="@color/colorPrimaryText" />
+
+                <com.trackexpense.snapbill.ui.TextViewWithFont
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Password"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/colorPrimaryText"
+                    app:font_name="moon-bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.trackexpense.snapbill.ui.EditTextWithFont
+                    android:id="@+id/input_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_padding"
+                    android:enabled="true"
+                    android:gravity="left"
+                    android:hint="@string/hint_register_pass"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@drawable/cursor_input"
+                    android:textSize="16sp"
+                    app:font_name="Montserrat-Regular" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_repass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_lock_black_24dp"
+                    android:tint="@color/colorPrimaryText" />
+
+                <com.trackexpense.snapbill.ui.TextViewWithFont
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Confirm Password"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/colorPrimaryText"
+                    app:font_name="moon-bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.trackexpense.snapbill.ui.EditTextWithFont
+                    android:id="@+id/input_repass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_padding"
+                    android:enabled="true"
+                    android:gravity="left"
+                    android:hint="@string/hint_register_repass"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@drawable/cursor_input"
+                    android:textSize="16sp"
+                    app:font_name="Montserrat-Regular" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_token"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_vpn_key_black_24dp"
+                    android:tint="@color/colorPrimaryText" />
+
+                <com.trackexpense.snapbill.ui.TextViewWithFont
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="One-Time Password"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/colorPrimaryText"
+                    app:font_name="moon-bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.trackexpense.snapbill.ui.EditTextWithFont
+                    android:id="@+id/input_token"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_padding"
+                    android:enabled="true"
+                    android:gravity="left"
+                    android:hint="@string/hint_token"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp"
+                    app:font_name="Montserrat-Regular" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.trackexpense.snapbill.ui.ProgressButton
+            android:id="@+id/submit_button"
+            fontPath="fonts/moon-bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/bg_medium_sea_green" />
+
+        <!--<LinearLayout-->
+        <!--android:layout_marginTop="32dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/bg_corner_radius_button"-->
+        <!--android:id="@+id/new_bill_button">-->
+        <!--<com.trackexpense.snapbill.ui.TextViewWithFont-->
+        <!--android:id="@+id/register_button"-->
+        <!--app:font_name="moon-bold"-->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="16dp"-->
+        <!--android:text="Okay"-->
+        <!--android:textColor="@color/colorPrimaryText"-->
+        <!--android:gravity="center"-->
+        <!--style="@style/SelectableItemBackground"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<br.com.simplepass.loading_button_lib.customViews.CircularProgressButton-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="32dp"-->
+        <!--android:id="@+id/submit_button"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/white_overlay"-->
+        <!--android:text="Okay"-->
+        <!--android:textSize="16sp"-->
+        <!--android:textColor="@color/bg_medium_sea_green"-->
+        <!--app:spinning_bar_color="#FFF"-->
+        <!--app:spinning_bar_padding="6dp"-->
+        <!--app:spinning_bar_width="4dp"-->
+        <!--app:initialCornerAngle="0dp"-->
+        <!--app:finalCornerAngle="0dp"/>-->
+
+        <ViewAnimator
+            android:id="@+id/change_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="8dp">
+
+            <com.trackexpense.snapbill.ui.TextViewWithFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="3"
+                android:text="@string/button_goto_login"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="12sp"
+                app:font_name="Montserrat-Regular" />
+
+            <com.trackexpense.snapbill.ui.TextViewWithFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/button_goto_register"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="12sp"
+                app:font_name="Montserrat-Regular" />
+
+            <com.trackexpense.snapbill.ui.TextViewWithFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/activation_msg"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="12sp"
+                app:font_name="Montserrat-Regular" />
+        </ViewAnimator>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.trackexpense.snapbill.activity.unused.CameraActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+
+        <com.trackexpense.snapbill.ui.TextViewWithFont
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/white"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:padding="16dp"
+            android:text="Keep receipt in front of camera"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="14sp"
+            app:font_name="Montserrat-Regular"/>
+
+        <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@color/colorPrimaryText"/>-->
+
+        <com.trackexpense.snapbill.camera.CameraSourcePreview
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.trackexpense.snapbill.camera.GraphicOverlay
+                android:id="@+id/graphicOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.trackexpense.snapbill.camera.CameraSourcePreview>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:animateLayoutChanges="true"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!--<com.trackexpense.snapbill.ui.TextViewWithFont-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:text="touch on"-->
+                <!--android:textColor="@color/alert"-->
+                <!--app:font_name="Montserrat-Regular"-->
+                <!--app:font_type="italic" />-->
+
+            <!--<com.trackexpense.snapbill.ui.TextViewWithFont-->
+                <!--android:id="@+id/current_input_name"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="8dp"-->
+                <!--android:text="MERCHANT NAME"-->
+                <!--android:textAppearance="@android:style/TextAppearance.Medium"-->
+                <!--android:textColor="@color/colorPrimaryText"-->
+                <!--app:font_name="Montserrat-Regular" />-->
+
+            <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/white"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="8dp"-->
+                <!--android:text="..."-->
+                <!--android:textColor="@color/colorPrimaryText" />-->
+
+        </LinearLayout>
+
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_weight="0"-->
+        <!--android:background="@android:color/white"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="@dimen/fab_margin">-->
+
+        <!--<com.trackexpense.snapbill.ui.InputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/input_merchant_name"-->
+        <!--app:hint="Merchant Name"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:paddingBottom="8dp"/>-->
+
+        <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:textColorHint="@color/colorSecondaryText">-->
+        <!--<EditText android:id="@+id/input_amount"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:inputType="textEmailAddress"-->
+        <!--android:hint="BillRecord Amount"-->
+        <!--android:textColor="@color/colorPrimaryText"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <!--</LinearLayout>-->
+
+    </LinearLayout>
+
+</FrameLayout>

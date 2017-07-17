@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorPrimary"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="left">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                fontPath="@string/font_moon_bold"
+                android:id="@+id/bill_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your"
+                android:textSize="40sp"
+                android:textColor="@color/colorPrimaryText"/>
+            <TextView
+                fontPath="@string/font_moon_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Bills"
+                android:textSize="40sp"
+                app:font_name="moon-bold"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/bill_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

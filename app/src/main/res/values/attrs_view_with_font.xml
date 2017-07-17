@@ -1,0 +1,9 @@
+<resources>
+    <declare-styleable name="ViewWithFont">
+        <attr name="font_name" format="string"/>
+        <attr name="font_type">
+            <enum name="bold" value="1"/>
+            <enum name="italic" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

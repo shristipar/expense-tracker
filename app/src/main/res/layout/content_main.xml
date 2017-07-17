@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_main"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.trackexpense.snapbill.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    tools:ignore="MissingPrefix" >
+
+    <!--<com.trackexpense.snapbill.ui.TextViewWithFont
+        android:id="@+id/go_to_register"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:font_name="moon-bold"
+        android:padding="8dp"
+        style="@style/SelectableItemBackground"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="Register"/>-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/app_name_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Snap"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="50sp"
+                fontPath="@string/font_moon_bold"/>
+
+            <TextView
+                android:id="@+id/app_name_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Bill"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                fontPath="@string/font_moon_bold"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tag_line"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="14sp"/>
+
+        <com.trackexpense.snapbill.ui.ProgressButton
+            android:id="@+id/new_bill_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="I have a New Bill"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <!--<LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_corner_radius_button"
+            android:id="@+id/new_bill_button">
+            <com.trackexpense.snapbill.ui.TextViewWithFont
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:text="I have a New BillRecord"
+                app:font_name="moon-bold"
+                android:textColor="@color/bg_fiery_rose"
+                android:gravity="center"
+                style="@style/SelectableItemBackground"/>
+        </LinearLayout>-->
+
+    </LinearLayout>
+
+</RelativeLayout>
